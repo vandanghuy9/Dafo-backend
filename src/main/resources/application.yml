@@ -1,0 +1,26 @@
+server:
+  port: 8080
+  servlet:
+    context-path: '/api'
+  compression:
+    enabled: true # Enable response compression
+    mime-types: text/html,text/xml,text/plain,text/css,text/javascript,application/javascript,application/json # The comma-separated list of mime types that should be compressed
+    min-response-size: 2048 # Compress the response only if the response size is at least 2 KB
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/school
+    username: root
+    password: Vandanghuy123@
+  jpa:
+    hibernate.ddl-auto: update
+    generate-ddl: true
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+app:
+  cors:
+    allowed-origins: http://127.0.0.1:5173
+
+
